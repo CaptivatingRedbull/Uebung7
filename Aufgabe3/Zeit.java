@@ -1,5 +1,7 @@
 package Aufgabe3;
 
+import java.text.Format;
+
 public class Zeit {
     private final int h;
     private final int min;
@@ -19,7 +21,7 @@ public class Zeit {
         }
     }
 
-    public void print() {
-        System.out.printf("%02d:%02d\n", h, min);
+    public String print() {
+        return String.format("%02d:%02d\n", h, min);
     }
 }

@@ -9,11 +9,10 @@ public class Bruch {
             throw new RuntimeException("Bitte für Nenner nicht 0 einsetzen");
         }
         if (nenner < 0) {
-            nenner = (-nenner);
+            nenner = Math.abs(nenner);
             zaehler = (-zaehler);
         }
-        if (zaehler == 0)
-            nenner = 1;
+        if (zaehler == 0) nenner = 1;
 
         int rest = 0;
         int kleinere = Math.min(nenner, zaehler);
@@ -60,6 +59,5 @@ public class Bruch {
     public String toString() {
         return (zaehler + "/" + nenner);
     }
-
 
 }
